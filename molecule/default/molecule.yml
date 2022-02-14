@@ -15,6 +15,7 @@ platforms:
       - /run/lock
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
   - name: ansible-role-dnsmasq-debian-11
     image: debian:11
     command: /lib/systemd/systemd
@@ -23,6 +24,7 @@ platforms:
       - /run/lock
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
   - name: ansible-role-dnsmasq-ubuntu-1804
     image: ubuntu:18.04
     command: /lib/systemd/systemd
@@ -31,6 +33,7 @@ platforms:
       - /run/lock
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
   - name: ansible-role-dnsmasq-ubuntu-2004
     image: ubuntu:20.04
     command: /lib/systemd/systemd
@@ -39,6 +42,7 @@ platforms:
       - /run/lock
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    privileged: true
 
 lint: |
     yamllint .
