@@ -25,8 +25,8 @@ platforms:
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
-  - name: ansible-role-dnsmasq-ubuntu-1804
-    image: ubuntu:18.04
+  - name: ansible-role-dnsmasq-ubuntu-2004
+    image: ubuntu:20.04
     command: /lib/systemd/systemd
     tmpfs:
       - /run
@@ -34,8 +34,8 @@ platforms:
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
     privileged: true
-  - name: ansible-role-dnsmasq-ubuntu-2004
-    image: ubuntu:20.04
+  - name: ansible-role-dnsmasq-ubuntu-2204
+    image: ubuntu:22.04
     command: /lib/systemd/systemd
     tmpfs:
       - /run

@@ -1,12 +1,12 @@
 ---
 - name: Ensure dependencies are installed
-  apt:
+  ansible.builtin.apt:
     name: "{{ dnsmasq_dependencies }}"
     state: present
     update_cache: true
 
 - name: Setup configuration files
-  template:
+  ansible.builtin.template:
     dest: /etc/dnsmasq.d/{{ item.key }}
     group: root
     mode: 0644
@@ -17,7 +17,7 @@
   notify: Restart dnsmasq
 
 - name: Ensure dnsmasq is started and starts on boot
-  service:
+  ansible.builtin.service:
     enabled: true
     name: dnsmasq
     state: started
