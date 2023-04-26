@@ -9,7 +9,7 @@
   ansible.builtin.template:
     dest: /etc/dnsmasq.d/{{ item.key }}
     group: root
-    mode: 0644
+    mode: "0644"
     owner: root
     src: conf.j2
     validate: 'dnsmasq --test -C %s'
