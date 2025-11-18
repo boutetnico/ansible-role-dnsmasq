@@ -24,7 +24,7 @@ Role Variables
 
 | Variable             | Required | Default             | Choices   | Comments                                 |
 |----------------------|----------|---------------------|-----------|------------------------------------------|
-| dnsmasq_dependencies | true     | `dnsmasq`           | string    |                                          |
+| dnsmasq_dependencies | true     | `[dnsmasq]`         | list      |                                          |
 | dnsmasq_conf         | true     | `{}`                | dict      |                                          |
 
 Dependencies
